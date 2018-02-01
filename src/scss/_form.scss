@@ -1,0 +1,176 @@
+/*
+* Biography section
+* Skills section
+* JS-level section
+*   - Diagram block
+*   - Score block
+*/
+
+/******* Biography section *******/
+
+.bio {
+	padding-top: 20px;
+	padding-bottom: 10px;
+
+	&__photo {
+		display: block;
+		margin: 10px auto 0;
+		border-radius: 100%;
+		width: 100%;
+		max-width: 140px;
+	}
+
+	&__input {
+		margin-bottom: 23px;
+		border: 0;
+		border-bottom: 2px solid $color-input-border-bio;
+		padding: 7px 0 5px;
+		width: 100%;
+		font-family: $font-bio;
+		font-weight: $font-weight-bio;
+		font-size: $font-size-bio;
+		line-height: $line-height-bio;
+		letter-spacing: $letter-spacing-bio;
+		text-transform: uppercase;
+		color: $color-input-bio;
+		background-color: rgba(255, 255, 255, 0);
+
+		&::placeholder {
+			color: $color-input-bio;
+		}
+	}
+
+	&__inputs-wrapper_hidden {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		opacity: 0;
+	}
+
+	&__stamp {
+		position: absolute;
+		right: -5px;
+		bottom: 0;
+
+		@media (max-width: 400px) {
+			opacity: 0.5;
+		}
+	}
+}
+
+/******* End biography section *******/
+
+/******* Skills section *******/
+.skills {
+	&__checkbox_container {
+		margin-bottom: 38px;
+		font-family: $font-skills;
+		font-weight: $font-weight-skills;
+		font-size: $font-size-skills;
+		letter-spacing: $letter-spacing-skills;
+		text-transform: uppercase;
+		color: $color-checbox-text;
+	}
+}
+
+/******* End skills section *******/
+
+/******* JS-level section *******/
+
+.js-level {
+	padding-top: 35px;
+	padding-bottom: 55px;
+}
+
+// Diagram block
+
+.js-diagram {
+	&__container {
+		position: relative;
+		overflow: hidden;
+		margin-top: 20px;
+		height: 138px;
+	}
+
+	&__svg {
+		position: absolute;
+		top: 0;
+		overflow: hidden;
+		height: 138px;
+		max-width: 258px;
+
+		&_hidden {
+			opacity: 0;
+		}
+
+		&_yellow {
+			fill: $color-yellow;
+		}
+
+		&_green {
+			fill: $color-green;
+		}
+
+		&_blue {
+			fill: $color-blue;
+		}
+
+		@media (max-width: 580px) {
+			position: relative;
+			display: block;
+			margin: auto;
+		}
+	}
+
+	&__arrow {
+		fill: $color-arrow;
+		transform-origin: bottom center;
+		transition: 0.3s;
+	}
+}
+
+// End diagram block
+
+// Score block
+
+.js-score {
+	&__container {
+		padding-top: 25px;
+
+		@media (max-width: 580px) {
+			text-align: center;
+		}
+	}
+
+	&__text {
+		margin: 0;
+		font-family: $font-JS-level;
+		font-weight: $font-weight-JS-level;
+		font-size: $font-size-JS-level;
+		line-height: $line-height-JS-level;
+	}
+
+	&__value {
+		border: 0;
+		width: 130px;
+		font-weight: $font-weight-JS-score;
+		font-size: $font-size-JS-score;
+		line-height: $line-height-JS-score;
+		color: $color-input-JS-score;
+		background-color: rgba(255, 255, 255, 0);
+
+		&:focus {
+			outline: none;
+		}
+
+		@media (max-width: 580px) {
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
+
+// End score block
+
+/******* End JS-level section *******/

@@ -1,0 +1,83 @@
+// stylelint-disable scss/dollar-variable-empty-line-before
+
+// SETTINGS FOR FOUNDATION
+$global-width: 662px;
+$breakpoints: (small: 0, medium: 580px, large: 1024px, xlarge: 1200px, xxlarge: 1440px);
+$grid-column-count: 8;
+$grid-column-gutter: (small: 20px, medium: 20px);
+
+// END SETTINGS FOR FOUNDATION
+
+// COLORS
+
+$color-black: #000;
+$color-white: #fff;
+$color-gray: #eee;
+$color-darkgray: #ddd;
+$color-yellow: #ffc815;
+$color-green: #a3cd3b;
+$color-blue: #0093d7;
+
+// Titles colors
+
+$color-tittles: #010101;
+
+// Inputs  colors
+
+$color-input: #666;
+$color-input-border: #333;
+$color-input-JS-score: $color-blue;
+$color-checbox: $color-gray;
+$color-checbox-hover: $color-darkgray;
+$color-checbox-checked: $color-blue;
+$color-checkbox-indicator: $color-white;
+$color-checbox-text: $color-input;
+
+// JS-level colors
+
+$color-arrow: #3e3d40;
+
+// END COLORS
+
+// FONTS STYLES
+
+$font-general: "Roboto";
+$font-size-general: 12px;
+$line-height-general: 16px;
+$font-weight-general: 500;
+
+// Titles font style
+
+$font-titles: $font-general;
+$font-size-h3: 18px;
+$font-weight-h3: 500;
+
+// Bio section font style
+
+$font-bio: $font-general;
+$font-size-bio: 13px;
+$font-weight-bio: 500;
+$line-height-bio: 18px;
+$letter-spacing-bio: 0.5px;
+$color-input-bio: $color-input;
+$color-input-border-bio: $color-input-border;
+
+// Skills section font style
+
+$font-skills: $font-general;
+$font-weight-skills: $font-weight-general;
+$font-size-skills: $font-size-general;
+$letter-spacing-skills: 1.5px;
+
+// JS-level section font style
+
+$font-JS-level: $font-general;
+$font-weight-JS-level: $font-weight-general;
+$font-size-JS-level: 18px;
+$line-height-JS-level: 25px;
+
+$font-weight-JS-score: 900;
+$font-size-JS-score: 50px;
+$line-height-JS-score: 80px;
+
+// END FONTS STYLES

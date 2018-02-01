@@ -1,0 +1,135 @@
+/*
+* General
+* Titles
+* Inputs
+*   - checkbox
+*/
+
+/****** General ******/
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $font-general;
+	font-weight: $font-weight-general;
+	font-size: $font-size-general;
+	line-height: $line-height-general;
+	background: $color-gray;
+}
+
+.form-wrapper {
+	display: block;
+	overflow: hidden;
+	margin: 60px auto;
+	padding: 0;
+	max-width: 662px;
+	background: $color-white;
+}
+
+.section-wrapper {
+	background: url("../images/bg.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.row {
+	padding: 0 10px;
+}
+
+.rel {
+	position: relative;
+}
+
+.bottom-line {
+	border-bottom: 2px solid $color-gray;
+}
+
+/****** End general ******/
+
+/****** Titles ******/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-titles;
+	color: $color-tittles;
+}
+
+h3 {
+	margin: 30px 0 20px;
+	font-weight: $font-weight-h3;
+	font-size: $font-size-h3;
+}
+
+/****** End titles ******/
+
+/****** Inputs ******/
+input:focus {
+	outline: none;
+}
+
+// Checkbox
+.checkbox {
+	&__container {
+		position: relative;
+		display: block;
+		padding-left: 28px;
+		cursor: pointer;
+	}
+
+	&__input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+	}
+
+	&__mark {
+		position: absolute;
+		left: 0;
+		top: 0;
+		border-radius: 5px;
+		width: 20px;
+		height: 20px;
+		background-color: $color-checbox;
+	}
+
+	&__mark::after {
+		content: "";
+		position: absolute;
+		display: none;
+	}
+
+	&__container &__mark::after {
+		left: 7px;
+		top: 2px;
+		border: solid $color-checkbox-indicator;
+		border-width: 0 2px 2px 0;
+		width: 7px;
+		height: 13px;
+		transform: rotate(45deg);
+	}
+
+	&__container:hover &__input ~ &__mark {
+		background-color: $color-checbox-hover;
+	}
+
+	&__container &__input:checked ~ &__mark {
+		background-color: $color-checbox-checked;
+	}
+
+	&__container &__input:checked ~ &__mark::after {
+		display: block;
+	}
+}
+
+// End checkbox
+
+/****** End inputs ******/

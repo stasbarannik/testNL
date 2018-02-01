@@ -1,0 +1,91 @@
+extends pug/base
+
+prepend vars
+ - title = 'Форма-анкета'
+ - description = 'Форма-анкета Баранник Станислав Олегович.'
+
+append vars
+ - html.classList.push('page-index')
+ - meta.charset = 'utf-8'
+ - meta.viewport = 'width=device-width, initial-scale=1'
+
+block content
+ .form-wrapper
+  //- Biography section
+  .row.section-wrapper.bio.bottom-line
+   .small-8.medium-2.columns
+    img.bio__photo(src="../images/photo.png" alt="Фото Баранник Станислав")
+   .small-8.medium-6.columns.rel#bioData
+    input.bio__input#name(placeholder="Станислав Баранник")
+    input.bio__input#datebday(placeholder="16.05.1989")
+    input.bio__input#adress(placeholder="Запорожье")
+    input.bio__input#contacts(placeholder="stasbarannik@gmail.com")
+    img.bio__stamp(src="../images/stamp.png" alt="approved")
+    .small-8.columns.bio__inputs-wrapper_hidden#bioDataHidden
+     input.bio__input
+     input.bio__input
+     input.bio__input
+     input.bio__input
+  //- End biography section
+
+  //- Skills section
+  .row.section-wrapper.skills.bottom-line
+   .small-8.column
+    h3.tittle Навыки
+   .small-4.medium-2.column
+    label.checkbox__container.skills__checkbox_container HTML5
+     input.checkbox__input(type="checkbox" value="HTML5" checked="true")
+     span.checkbox__mark
+    label.checkbox__container.skills__checkbox_container CSS3
+     input.checkbox__input(type="checkbox" value="CSS3" checked="true")
+     span.checkbox__mark
+    label.checkbox__container.skills__checkbox_container БЭМ
+     input.checkbox__input(type="checkbox" value="БЭМ" checked="true")
+     span.checkbox__mark
+   .small-4.medium-2.column
+    label.checkbox__container.skills__checkbox_container SASS
+     input.checkbox__input(type="checkbox" value="SASS" checked="true")
+     span.checkbox__mark
+    label.checkbox__container.skills__checkbox_container LESS
+     input.checkbox__input(type="checkbox" value="LESS" checked="true")
+     span.checkbox__mark
+    label.checkbox__container.skills__checkbox_container GULP
+     input.checkbox__input(type="checkbox" value="GULP" checked="true")
+     span.checkbox__mark
+   .small-4.medium-2.column
+    label.checkbox__container.skills__checkbox_container VanillaJS
+     input.checkbox__input(type="checkbox" value="VanillaJS")
+     span.checkbox__mark
+    label.checkbox__container.skills__checkbox_container Angular
+     input.checkbox__input(type="checkbox" value="Angular")
+     span.checkbox__mark
+    label.checkbox__container.skills__checkbox_container JQuery
+     input.checkbox__input(type="checkbox" value="JQuery" checked="true")
+     span.checkbox__mark
+   .small-4.medium-2.column
+    label.checkbox__container.skills__checkbox_container Git
+     input.checkbox__input(type="checkbox" value="Git" checked="true")
+     span.checkbox__mark
+    label.checkbox__container.skills__checkbox_container Foundation
+     input.checkbox__input(type="checkbox" value="Foundation" checked="true")
+     span.checkbox__mark
+    label.checkbox__container.skills__checkbox_container Bootstrap
+     input.checkbox__input(type="checkbox" value="Bootstrap" checked="true")
+     span.checkbox__mark
+  //- End Skills section
+
+  //- JS-level section
+  .row.section-wrapper.js-level
+   .small-8.medium-4.column.js-diagram__container
+    svg.js-diagram__svg
+     path.js-diagram__svg_yellow(d="M179,459.9a125.71,125.71,0,0,1,49.18-99.64L263,402.61c-18.66,14.64-28.43,31.95-28.43,57.29H179Z" transform="translate(-178.99 -332.96)")
+     path.js-diagram__svg_green(d="M234.12,356a127.06,127.06,0,0,1,145.82,0l-34.52,43c-14.68-9.92-26.3-12.2-38.39-12.2s-26.19,4.36-38.35,12.2Z" transform="translate(-178.99 -332.96)")
+     path.js-diagram__svg_blue(d="M384.25,360.26A126.87,126.87,0,0,1,432,459.9h-54c0-25.34-10.4-43.4-27.49-57.29Z" transform="translate(-178.99 -332.96)")
+     polygon.js-diagram__arrow#arrowJS(points="119,124 129,70 139,124")
+     circle.js-diagram__svg_hidden#daigramJS(r="128" cx="128" cy="123")
+     circle.js-diagram__arrow(r="10" cx="129" cy="124")
+   .small-8.medium-4.column.js-score__container
+    p.js-score__text Мой уровень владения
+    p.js-score__text Java Script
+    input.js-score__value#scoreJS
+  //- End JS-level section
